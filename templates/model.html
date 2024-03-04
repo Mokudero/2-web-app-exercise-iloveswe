@@ -1,6 +1,6 @@
 {% extends "layout.html" %} {% block content %}
 <body>
-  <a href="" class="logo-link"><img src="../static/{{ logo_url }}" alt="" class="logo"></a>
+  <a href="" class="logo-link"><img src="../static/{{ logo_urls.get(doc) }}" alt="" class="logo"></a>
 
   {% with messages = get_flashed_messages() %} {% if messages %}
   <ul class="flashes">
