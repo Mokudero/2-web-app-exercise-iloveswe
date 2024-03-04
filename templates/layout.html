@@ -30,8 +30,6 @@
         height: 100%;
         line-height: 1.8;
       }
-
-      /* Full height image header */
       .bgimg-1 {
         background-position: center;
         background-size: cover;
@@ -68,6 +66,7 @@
       }
 
       .card {
+        margin-top: 5000px;
         position: relative; 
         margin: 10px;
         padding: 20px; 
@@ -76,6 +75,7 @@
         box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
         overflow: hidden; 
         transition: transform 0.3s, box-shadow 0.3s;
+        max-width: 400px;
       }
 
       .card::before {
@@ -94,7 +94,10 @@
         transform: translateY(-5px);
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
       }
-
+      .card input[type="text"] {
+        width: calc(100% - 20px);
+        margin-bottom: 10px;
+      }
       .logo-link {
         display: block; 
         width: 100%; 
@@ -109,6 +112,61 @@
         height: auto; 
         display: block; 
         margin: 0 auto; 
+      }
+
+      .title{
+        text-align: center;
+      }
+
+      .cards {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        max-width: 400px; 
+        overflow: hidden;
+        margin-top: 60px;
+      }
+
+      .cards-header {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .cards-body {
+        padding: 20px;
+      }
+
+      .cards input[type="text"] {
+        width: calc(100% - 20px);
+        margin-bottom: 10px; 
+      }
+
+      .cardl {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+        max-width: 400px; 
+        padding: 10px;
+        margin-top: 50px; 
+      }
+
+      .cardl-header {
+        background-color: #f0f0f0;
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      .cardl-body {
+        padding: 20px;
+      }
+
+      .w3-button{
+        border-radius: 12px;
+        text-align: center;
+        border: 8px;
       }
 
 

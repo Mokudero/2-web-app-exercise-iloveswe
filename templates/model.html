@@ -1,6 +1,6 @@
 {% extends "layout.html" %} {% block content %}
 <body>
-  <a href="" class="logo-link"><img src="../static/{{ logo_urls.get(doc) }}" alt="" class="logo"></a>
+  <img src="{{ url_for('static', filename=doc.logo) }}" alt="" class="logo" />
 
   {% with messages = get_flashed_messages() %} {% if messages %}
   <ul class="flashes">
@@ -9,58 +9,61 @@
     {% endfor %}
   </ul>
   {% endif %} {% endwith %}
-  <h3 class="title">Create Strategy</h3>
-  <div class="box">
-    <form method="POST" action="{{ url_for('model', model_id=doc) }}">
-      <div class="field">
-        <div class="control">
-          <input
-            class="w3-input w3-border"
-            type="text"
-            name="strategy-name"
-            placeholder="Strategy Name"
-            autofocus=""
-          />
+  <div class="cards">
+    <div class="cards-header">
+      <h3 class="title">Create Strategy</h3>
+    </div>
+    <div class="cards-body">
+      <form method="POST" action="{{ url_for('model', model_id=doc) }}">
+        <div class="field">
+          <div class="control">
+            <input
+              class="w3-input w3-border"
+              type="text"
+              name="strategy-name"
+              placeholder="Strategy Name"
+              autofocus=""
+            />
+          </div>
         </div>
-      </div>
-      <div class="field">
-        <div class="control">
-          <input
-            class="w3-input w3-border"
-            type="text"
-            name="buy"
-            placeholder="Buy"
-            autofocus=""
-          />
+        <div class="field">
+          <div class="control">
+            <input
+              class="w3-input w3-border"
+              type="text"
+              name="buy"
+              placeholder="Buy"
+              autofocus=""
+            />
+          </div>
         </div>
-      </div>
-
-      <div class="field">
-        <div class="control">
-          <input
-            class="w3-input w3-border"
-            type="text"
-            name="hold"
-            placeholder="Hold"
-            autofocus=""
-          />
+  
+        <div class="field">
+          <div class="control">
+            <input
+              class="w3-input w3-border"
+              type="text"
+              name="hold"
+              placeholder="Hold"
+              autofocus=""
+            />
+          </div>
         </div>
-      </div>
-
-      <div class="field">
-        <div class="control">
-          <input
-            class="w3-input w3-border"
-            type="text"
-            name="sell"
-            placeholder="Sell"
-          />
+  
+        <div class="field">
+          <div class="control">
+            <input
+              class="w3-input w3-border"
+              type="text"
+              name="sell"
+              placeholder="Sell"
+            />
+          </div>
         </div>
-      </div>
-
-      <button class="w3-button w3-black">Create Strategy</button>
-    </form>
+  
+        <button class="w3-button w3-black">Create Strategy</button>
+      </form>
+    </div>
   </div>
-</body>
 
 {% endblock %}

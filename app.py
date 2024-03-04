@@ -218,18 +218,18 @@ def model(model_id):
     Displays the model info
     """
     logo_urls = {
-        1: "/static/amazon_logo.png",
-        2: "/static/apple_logo.png",
-        3: "/static/google_logo.png",
-        4: "/static/meta_logo.png",
-        5: "/static/nvda_logo.png"
+        1: "amazon.png",
+        2: "apple.png",
+        3: "google.png",
+        4: "meta.png",
+        5: "nvda.png"
     }
-    
-    # Get the logo URL for the selected model ID
-    logo_url = logo_urls.get(model_id)
+#Get the logo URL for the selected model ID
+    logo_url = logo_urls[int(model_id)]
+    doc = {"logo": logo_url}
     #doc = db.model.find_one({"_id"} ObjectId(post_id))
-    doc = model_id
-    return render_template("model.html",logo_url=logo_url, logo_urls=logo_urls, doc=doc)
+    print(doc)
+    return render_template("model.html",doc=doc)
     
 
 @app.route('/model/<model_id>', methods=['POST'])
